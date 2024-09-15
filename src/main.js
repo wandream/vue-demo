@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/index'
-
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
+require('./mock/index')
+require('./mock/userInfo')
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -14,4 +17,6 @@ new Vue({
   components: { App },
   template: '<App/>',
   store
+  // Antd
 })
+Vue.use(Antd)

@@ -1,9 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <Child :propsname="1" @show="showAlert"/>
-    <SlotDemo />
-    <ul>
+    <!-- <Child :propsname="1" @show="showAlert"/> -->
+    <!-- <SlotDemo /> -->
+    <ol>
+      <li>
+        <router-link :to="{name: 'SlotDemo'}">
+          slot插槽
+        </router-link>
+      </li>
       <li>
         <router-link :to="{name: 'Computer'}">
           计算属性
@@ -21,12 +26,12 @@
       </li>
       <li>
         <router-link :to="{name: 'Vfordemo'}">
-          条件渲染
+          列表渲染
         </router-link>
       </li>
       <li>
         <router-link :to="{name: 'Vonshow'}">
-          事件处理
+          v-show
         </router-link>
       </li>
       <li>
@@ -36,7 +41,7 @@
       </li>
       <li>
         <router-link :to="{name: 'Keepalive'}">
-          动态组件
+          组件缓存
         </router-link>
       </li>
       <li>
@@ -44,9 +49,41 @@
           Todo
         </router-link>
       </li>
-    </ul>
-    <Sabout />
-    <Shome />
+      <li>
+        <router-link :to="{name: 'componentDemo'}">
+          动态组件
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'Directivesdemo'}">
+          自定义指令
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'lifecircle'}">
+          生命周期
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'myMixin'}">
+          Mixin
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'Vrouter'}">
+          Vrouter
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'useMock'}">Mockjs</router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'vmenu'}">单页面实现多标签</router-link>
+      </li>
+    </ol>
+    <!-- <Sabout />
+    <Shome /> -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -86,10 +123,11 @@ ul {
   padding: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+  /* display: inline-block; */
+  margin: 10px;
 }
 a {
-  color: #42b983;
+  color: #3d8564;
+  text-decoration: none;
 }
 </style>
